@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en" data-refpop="{&#34;open&#34;:&#34;Open in the notes →&#34;,&#34;goto&#34;:&#34;Go there →&#34;,&#34;loading&#34;:&#34;Loading…&#34;,&#34;failed&#34;:&#34;Could not load this reference.&#34;}"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study with AI · Theoretical Mechanics</title><meta name="description" content="Choose a lecture and section. Prepare a prompt, then check the answer’s assumptions and calculations yourself."><link rel="icon" href="/tem/favicon.svg"><link rel="alternate" hreflang="lt" href="/tem/ai"><link rel="alternate" hreflang="en" href="/tem/en/ai"><script>
+      // Applied before first paint, so the page never flashes the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("mechanics-theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script><link rel="stylesheet" href="/tem/_astro/about.D-EpBVDy.css"></head> <body> <script type="module" src="/tem/_astro/UserNav.astro_astro_type_script_index_0_lang.DBZI4Erb.js"></script>  <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
+      // Fade the board out over the first 60% of a screen of scrolling.
+      (function () {
+        var board = document.querySelector(".board"), frame = 0;
+        if (!board) return;
+        function update() {
+          frame = 0;
+          board.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.6)));
+        }
+        window.addEventListener("scroll", function () {
+          if (!frame) frame = requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+      })();
+    </script> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="wrap bar">  <a class="brand" href="/tem/en/">Theoretical Mechanics</a> <nav class="site-nav">  <div class="nav-links"> <a href="/tem/en/"> Lectures </a><a href="/tem/en/problems"> Problems </a><a href="/tem/en/ai" aria-current="page"> Study with AI </a><a href="/tem/en/literature"> Bibliography </a><a href="/tem/en/about"> About </a><a href="/tem/en/search"> Search </a> </div>  <a class="matfiz-user-nav" href="/tem/en/user" data-matfiz-nav data-label="My progress" aria-label="My progress" title="My progress" data-matfiz-course="{&#34;version&#34;:1,&#34;id&#34;:&#34;mechanics&#34;,&#34;prefix&#34;:&#34;mechanics-&#34;,&#34;titles&#34;:{&#34;lt&#34;:&#34;Teorinė mechanika&#34;,&#34;en&#34;:&#34;Theoretical Mechanics&#34;},&#34;homes&#34;:{&#34;lt&#34;:&#34;/tem/&#34;,&#34;en&#34;:&#34;/tem/en/&#34;},&#34;details&#34;:{&#34;lt&#34;:&#34;/tem/&#34;,&#34;en&#34;:&#34;/tem/en/&#34;}}" hidden data-astro-cid-udyq3rbu> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-udyq3rbu> <path d="M3 3v18h18" data-astro-cid-udyq3rbu></path><path d="m7 15 4-4 3 3 5-6" data-astro-cid-udyq3rbu></path> </svg> </a>   <div class="lang-switch" role="group" aria-label="Language"> <a href="/tem/ai" hreflang="lt" lang="lt"> LT <span class="lang-full">Lietuvių</span> </a><a href="/tem/en/ai" hreflang="en" lang="en" aria-current="true"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark theme"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" id="main" data-pagefind-body="true">  <header class="page-head"> <h1>Study with AI</h1> <p class="lede">Choose a lecture and section. Prepare a prompt, then check the answer’s assumptions and calculations yourself.</p> </header> <section class="ask" id="ask" aria-labelledby="ask-heading" data-ask="{&#34;lectures&#34;:[{&#34;id&#34;:1,&#34;title&#34;:&#34;States, determinism and phase portraits&#34;,&#34;sections&#34;:[&#34;Determinacy&#34;,&#34;Vector fields and flows&#34;,&#34;Completeness&#34;,&#34;One degree of freedom: the energy method&#34;,&#34;The pendulum and the cylinder&#34;,&#34;Why phase space, and a contrast&#34;]},{&#34;id&#34;:2,&#34;title&#34;:&#34;Constraints and Lagrange's equations&#34;,&#34;sections&#34;:[&#34;Holonomic constraints&#34;,&#34;Configuration spaces&#34;,&#34;Velocities&#34;,&#34;Ideal constraints and d’Alembert&#34;,&#34;Lagrange’s equations, and the pendulum&#34;]},{&#34;id&#34;:3,&#34;title&#34;:&#34;Hamilton's principle and Noether's theorem&#34;,&#34;sections&#34;:[&#34;The action and its first variation&#34;,&#34;Stationary, not least&#34;,&#34;Coordinate invariance and gauge freedom&#34;,&#34;The boundary term and momentum&#34;,&#34;Noether’s theorem (Lagrangian)&#34;,&#34;The energy function and the central force&#34;]},{&#34;id&#34;:4,&#34;title&#34;:&#34;The Legendre transform and Hamilton's equations&#34;,&#34;sections&#34;:[&#34;Momentum is a covector&#34;,&#34;The Legendre transform of a convex function&#34;,&#34;The Legendre transform of a Lagrangian&#34;,&#34;The phase-space action principle&#34;,&#34;Natural systems; Lagrange and Hamilton&#34;]},{&#34;id&#34;:5,&#34;title&#34;:&#34;Observables and the Poisson algebra&#34;,&#34;sections&#34;:[&#34;Observables&#34;,&#34;The Poisson bracket&#34;,&#34;The algebra&#34;,&#34;Conserved quantities&#34;,&#34;Angular momentum&#34;,&#34;The Heisenberg picture&#34;,&#34;Finite-dimensional subalgebras&#34;]},{&#34;id&#34;:6,&#34;title&#34;:&#34;Flows, symmetries and the symplectic form&#34;,&#34;sections&#34;:[&#34;Hamiltonian vector fields: X_{f}=J∇f&#34;,&#34;Bracket preservation and the Jacobi identity&#34;,&#34;The Lie bracket, and X_{{f,g}}&#34;,&#34;Noether reciprocity&#34;,&#34;The symplectic form&#34;,&#34;The symplectic group; flows are symplectic&#34;,&#34;Quadratic Hamiltonians&#34;]},{&#34;id&#34;:7,&#34;title&#34;:&#34;States, Liouville's theorem and the second answer&#34;,&#34;sections&#34;:[&#34;States&#34;,&#34;Liouville’s theorem&#34;,&#34;The two pictures&#34;,&#34;No attractors&#34;,&#34;What a mechanical system is: the second answer&#34;]},{&#34;id&#34;:8,&#34;title&#34;:&#34;Canonical maps and generating functions&#34;,&#34;sections&#34;:[&#34;Canonical maps&#34;,&#34;1-forms in coordinates&#34;,&#34;The closedness test&#34;,&#34;Generating functions&#34;,&#34;Time-dependent canonical maps&#34;]},{&#34;id&#34;:9,&#34;title&#34;:&#34;Hamilton–Jacobi theory and action–angle variables&#34;,&#34;sections&#34;:[&#34;The Hamilton–Jacobi equation&#34;,&#34;Complete integrals and Jacobi’s theorem&#34;,&#34;Time-independent Hamiltonians and separation&#34;,&#34;Action and angle in one degree of freedom&#34;]},{&#34;id&#34;:10,&#34;title&#34;:&#34;Momentum maps and reduction&#34;,&#34;sections&#34;:[&#34;Matrix groups and their generators&#34;,&#34;The momentum map and cotangent lifts&#34;,&#34;Noether for groups&#34;,&#34;Cyclic variables&#34;,&#34;The central force, reduced&#34;,&#34;Kepler: its orbits and its hidden symmetry&#34;]},{&#34;id&#34;:11,&#34;title&#34;:&#34;Poisson manifolds and the rigid body&#34;,&#34;sections&#34;:[&#34;Poisson structures on ℝ^{m}&#34;,&#34;The Lie–Poisson bracket, and where it comes from&#34;,&#34;Casimirs and leaves&#34;,&#34;The rigid body and its sign&#34;,&#34;Euler’s equations&#34;,&#34;The stable axes&#34;,&#34;The unstable axis&#34;]},{&#34;id&#34;:12,&#34;title&#34;:&#34;Integrability, and what a mechanical system is&#34;,&#34;sections&#34;:[&#34;Lagrangian subspaces&#34;,&#34;Integrals in involution&#34;,&#34;Level sets are Lagrangian&#34;,&#34;The Liouville–Arnold theorem&#34;,&#34;What a mechanical system is: the final table&#34;,&#34;What quantum mechanics keeps&#34;]}],&#34;context&#34;:&#34;I am studying Theoretical Mechanics: Lagrangian, Hamiltonian and Poisson descriptions. I am working on Lecture {n}, “{title}”, section “{topic}”. Use the lecture excerpt as the authority; ask for it when needed. The canonical bracket is {f,g}=f_q g_p−f_p g_q, time evolution is {f,H}, and X_f=J∇f with X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Frequency is ν; ω denotes the symplectic form. State hypotheses, regularity and domains. Distinguish local and global claims, and proved, sketched and cited results. Do not assume differential 2-form calculus.&#34;,&#34;modes&#34;:[{&#34;id&#34;:&#34;explain&#34;,&#34;label&#34;:&#34;Explain with an example&#34;,&#34;description&#34;:&#34;Explain the idea briefly, define each symbol, then work one small example from this section. State its hypotheses and domain. Give me a similar exercise and wait for my attempt. Ask me to check signs, units and limiting cases.&#34;,&#34;detailLabel&#34;:&#34;Add your question or attempt (optional).&#34;,&#34;detailPlaceholder&#34;:&#34;Question: …\nMy attempt: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nExplain the idea briefly, define each symbol, then work one small example from this section. State its hypotheses and domain. Give me a similar exercise and wait for my attempt. Ask me to check signs, units and limiting cases.&#34;},{&#34;id&#34;:&#34;quiz&#34;,&#34;label&#34;:&#34;Ask me questions&#34;,&#34;description&#34;:&#34;Ask one question at a time and wait. Start with a precise definition, then an example, a counterexample, and a hypothesis a theorem needs. Give a check or a hint when I struggle.&#34;,&#34;detailLabel&#34;:&#34;Add your question or attempt (optional).&#34;,&#34;detailPlaceholder&#34;:&#34;Question: …\nMy attempt: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nAsk one question at a time and wait. Start with a precise definition, then an example, a counterexample, and a hypothesis a theorem needs. Give a check or a hint when I struggle.&#34;},{&#34;id&#34;:&#34;check&#34;,&#34;label&#34;:&#34;Check my attempt&#34;,&#34;description&#34;:&#34;Ask what is given and what must be shown. Read my attempt one step at a time and ask me to justify each step. Help me find any error myself. Check hypotheses, constraint forces, signs, units and conserved quantities. Do not invent an excerpt or a citation.&#34;,&#34;detailLabel&#34;:&#34;Add your question or attempt (optional).&#34;,&#34;detailPlaceholder&#34;:&#34;Question: …\nMy attempt: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nAsk what is given and what must be shown. Read my attempt one step at a time and ask me to justify each step. Help me find any error myself. Check hypotheses, constraint forces, signs, units and conserved quantities. Do not invent an excerpt or a citation.&#34;}]}" data-text="{&#34;copied&#34;:&#34;Copied ✓&#34;,&#34;selected&#34;:&#34;The prompt is selected. Press Ctrl+C.&#34;}"> <h2 id="ask-heading">Ask about a lecture</h2> <div class="ask-card"> <label class="ask-step"> <span>Lecture</span> <select class="select-field" data-lecture> <option value="1"> 1 · States, determinism and phase portraits </option><option value="2"> 2 · Constraints and Lagrange&#39;s equations </option><option value="3"> 3 · Hamilton&#39;s principle and Noether&#39;s theorem </option><option value="4"> 4 · The Legendre transform and Hamilton&#39;s equations </option><option value="5"> 5 · Observables and the Poisson algebra </option><option value="6"> 6 · Flows, symmetries and the symplectic form </option><option value="7"> 7 · States, Liouville&#39;s theorem and the second answer </option><option value="8"> 8 · Canonical maps and generating functions </option><option value="9"> 9 · Hamilton–Jacobi theory and action–angle variables </option><option value="10"> 10 · Momentum maps and reduction </option><option value="11"> 11 · Poisson manifolds and the rigid body </option><option value="12" selected> 12 · Integrability, and what a mechanical system is </option> </select> </label> <fieldset class="ask-step"> <legend>Section</legend> <div class="chip-row" data-topics> <label class="topic-chip"><input type="radio" name="ask-topic" value="Lagrangian subspaces" checked><span>Lagrangian subspaces</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Integrals in involution"><span>Integrals in involution</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Level sets are Lagrangian"><span>Level sets are Lagrangian</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="The Liouville–Arnold theorem"><span>The Liouville–Arnold theorem</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="What a mechanical system is: the final table"><span>What a mechanical system is: the final table</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="What quantum mechanics keeps"><span>What quantum mechanics keeps</span></label> </div> </fieldset> <fieldset class="ask-step"> <legend>What do you need?</legend> <div class="mode-grid"> <label class="mode"> <input type="radio" name="ask-mode" value="explain" checked> <span class="mode-label">Explain with an example</span> <span class="mode-description">Explain the idea briefly, define each symbol, then work one small example from this section. State its hypotheses and domain. Give me a similar exercise and wait for my attempt. Ask me to check signs, units and limiting cases.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="quiz"> <span class="mode-label">Ask me questions</span> <span class="mode-description">Ask one question at a time and wait. Start with a precise definition, then an example, a counterexample, and a hypothesis a theorem needs. Give a check or a hint when I struggle.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="check"> <span class="mode-label">Check my attempt</span> <span class="mode-description">Ask what is given and what must be shown. Read my attempt one step at a time and ask me to justify each step. Help me find any error myself. Check hypotheses, constraint forces, signs, units and conserved quantities. Do not invent an excerpt or a citation.</span> </label> </div> </fieldset> <label class="ask-step"> <span data-detail-label>Add your question or attempt (optional).</span> <textarea class="number-field ask-detail" rows="2" data-detail placeholder="Question: …
+My attempt: …"></textarea> </label> <label class="ask-step"> <span>Your prompt — edit freely</span> <textarea class="ask-preview" rows="12" data-preview spellcheck="false"></textarea> </label> <div class="ask-actions"> <a class="btn btn-primary" href="https://www.google.com/search?udm=50" target="_blank" rel="noopener" data-ai-mode>Ask Google AI ↗</a> <button class="btn" type="button" data-copy-preview>Copy prompt</button> </div> <p class="ask-status" data-status role="status" aria-live="polite">Use the copied prompt in your preferred assistant.</p> </div> </section><h2>Where to start</h2> <p class="section-intro">Ask for an assumption check before computing.</p> <div class="chat"> <div class="chat-turn chat-you"> <div class="chat-bubble"> <span class="chat-who">You</span> <p>I want to apply the completeness criterion to this potential.</p> </div>  </div><div class="chat-turn chat-ai"> <div class="chat-bubble"> <span class="chat-who">AI</span> <p>Is the potential C² on all of ℝⁿ and bounded below?</p> </div>  </div> </div> <h2>Study habits</h2> <ul class="habits"> <li><b>Provide the source.</b> Paste the precise statement and your own attempt.</li><li><b>Do the working.</b> Ask for one hint, then try again.</li> </ul> <h2>Longer sessions</h2> <p class="section-intro">Paste an excerpt and fill in the bracketed fields.</p> <details class="prompt-card" data-prompt> <summary> <span class="prompt-title">1 · Revise a concept</span> <span class="prompt-when">Paste the lecture excerpt and your question.</span> </summary> <div class="prompt-body"><pre data-prompt-text>I am studying Theoretical Mechanics: Lagrangian, Hamiltonian and Poisson descriptions. I am working on Lecture [N], “[lecture title]”, section “[section]”. Use the lecture excerpt as the authority; ask for it when needed. The canonical bracket is {f,g}=f_q g_p−f_p g_q, time evolution is {f,H}, and X_f=J∇f with X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Frequency is ν; ω denotes the symplectic form. State hypotheses, regularity and domains. Distinguish local and global claims, and proved, sketched and cited results. Do not assume differential 2-form calculus.
+
+Ask me for a definition, example and counterexample. Ask one question at a time and wait.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">2 · Audit a proof</span> <span class="prompt-when">Paste the lecture excerpt and your question.</span> </summary> <div class="prompt-body"><pre data-prompt-text>I am studying Theoretical Mechanics: Lagrangian, Hamiltonian and Poisson descriptions. I am working on Lecture [N], “[lecture title]”, section “[section]”. Use the lecture excerpt as the authority; ask for it when needed. The canonical bracket is {f,g}=f_q g_p−f_p g_q, time evolution is {f,H}, and X_f=J∇f with X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Frequency is ν; ω denotes the symplectic form. State hypotheses, regularity and domains. Distinguish local and global claims, and proved, sketched and cited results. Do not assume differential 2-form calculus.
+
+Ask for the statement and my complete proof. Check hypotheses, domains and signs at every step. Give me a hint so I can find any error myself.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">3 · Set a problem</span> <span class="prompt-when">Paste the lecture excerpt and your question.</span> </summary> <div class="prompt-body"><pre data-prompt-text>I am studying Theoretical Mechanics: Lagrangian, Hamiltonian and Poisson descriptions. I am working on Lecture [N], “[lecture title]”, section “[section]”. Use the lecture excerpt as the authority; ask for it when needed. The canonical bracket is {f,g}=f_q g_p−f_p g_q, time evolution is {f,H}, and X_f=J∇f with X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Frequency is ν; ω denotes the symplectic form. State hypotheses, regularity and domains. Distinguish local and global claims, and proved, sketched and cited results. Do not assume differential 2-form calculus.
+
+Help me write one problem on this lecture. Check that its data suffice. Ask me to solve it and verify the answer myself before giving it to a partner.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">4 · Work a problem</span> <span class="prompt-when">Paste the lecture excerpt and your question.</span> </summary> <div class="prompt-body"><pre data-prompt-text>I am studying Theoretical Mechanics: Lagrangian, Hamiltonian and Poisson descriptions. I am working on Lecture [N], “[lecture title]”, section “[section]”. Use the lecture excerpt as the authority; ask for it when needed. The canonical bracket is {f,g}=f_q g_p−f_p g_q, time evolution is {f,H}, and X_f=J∇f with X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Frequency is ν; ω denotes the symplectic form. State hypotheses, regularity and domains. Distinguish local and global claims, and proved, sketched and cited results. Do not assume differential 2-form calculus.
+
+Ask for the problem and my attempt. Ask why my chosen method applies. Offer one hint at a time and wait for my working.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><h2>Working in pairs</h2> <ol class="steps"> <li>Each write a problem and verify your own solution.</li><li>Swap the problem statements only.</li><li>Work each other’s problem.</li><li>Compare solutions and discuss errors without AI.</li> </ol> <div class="trap"> <h3>What to check</h3> <p><strong>Check the assumptions.</strong> Check hypotheses, signs and conserved quantities against the notes.</p><p><strong>Verify the answer.</strong> Check dimensions, signs and limiting cases.</p> </div> <script>
+    (function () {
+      /** Copy synchronously inside the click; the async API is the fallback. */
+      function copy(text) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed"; area.style.opacity = "0"; area.style.top = "0";
+        document.body.appendChild(area);
+        area.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(area);
+        if (!ok && navigator.clipboard) {
+          navigator.clipboard.writeText(text).catch(function () {});
+          ok = true;
+        }
+        return ok;
+      }
+      function say(status, message) {
+        if (!status) return;
+        status.textContent = message;
+        status.classList.add("is-live");
+      }
+
+      // ---- Ask about a lecture -------------------------------------------
+      var ask = document.querySelector("[data-ask]");
+      if (ask) {
+        var data = JSON.parse(ask.dataset.ask);
+        var text = JSON.parse(ask.dataset.text);
+        var lectureSelect = ask.querySelector("[data-lecture]");
+        var topics = ask.querySelector("[data-topics]");
+        var detail = ask.querySelector("[data-detail]");
+        var detailLabel = ask.querySelector("[data-detail-label]");
+        var preview = ask.querySelector("[data-preview]");
+        var status = ask.querySelector("[data-status]");
+
+        var fill = function (template, values) {
+          return template.replace(/\{(\w+)\}/g, function (whole, key) {
+            return key in values ? values[key] : whole;
+          });
+        };
+        var lecture = function () {
+          return data.lectures.find(function (l) { return String(l.id) === lectureSelect.value; });
+        };
+        var mode = function () {
+          var picked = ask.querySelector("input[name=ask-mode]:checked");
+          return data.modes.find(function (m) { return m.id === (picked && picked.value); }) || data.modes[0];
+        };
+        var topic = function () {
+          var picked = ask.querySelector("input[name=ask-topic]:checked");
+          return picked ? picked.value : "";
+        };
+
+        var renderTopics = function () {
+          topics.textContent = "";
+          lecture().sections.forEach(function (title, index) {
+            var label = document.createElement("label");
+            label.className = "topic-chip";
+            var input = document.createElement("input");
+            input.type = "radio"; input.name = "ask-topic"; input.value = title; input.checked = index === 0;
+            var span = document.createElement("span");
+            span.textContent = title;
+            label.appendChild(input); label.appendChild(span);
+            topics.appendChild(label);
+          });
+        };
+        var render = function () {
+          var l = lecture(), m = mode(), typed = detail.value.trim();
+          detailLabel.textContent = m.detailLabel;
+          detail.placeholder = m.detailPlaceholder;
+          var context = fill(data.context, { n: l.id, title: l.title, topic: topic() });
+          var detailText = typed ? fill(m.detailFilled, { detail: typed }) : m.detailEmpty;
+          preview.value = fill(m.template, { context: context, detail: detailText })
+            .replace(/\n{3,}/g, "\n\n");
+          syncAiMode();
+        };
+        var aiMode = ask.querySelector("[data-ai-mode]");
+        var syncAiMode = function () {
+          aiMode.href = "https://www.google.com/search?udm=50&q=" + encodeURIComponent(preview.value);
+        };
+        // The preview is editable, and an edited prompt is the one to send.
+        preview.addEventListener("input", syncAiMode);
+
+        // A lecture page links here as ai/?lecture=N, so arrive on that lecture.
+        var wanted = new URLSearchParams(location.search).get("lecture");
+        if (wanted && data.lectures.some(function (l) { return String(l.id) === wanted; })) {
+          lectureSelect.value = wanted;
+          renderTopics();
+        }
+        lectureSelect.addEventListener("change", function () { renderTopics(); render(); });
+        // The preview is excluded: its change event fires on blur, and
+        // re-rendering then would throw away what the student just edited.
+        ask.addEventListener("change", function (event) {
+          if (event.target !== lectureSelect && event.target !== preview && event.target !== detail) render();
+        });
+        detail.addEventListener("input", render);
+        render();
+
+        ask.querySelector("[data-copy-preview]").addEventListener("click", function () {
+          if (copy(preview.value)) { say(status, text.copied); }
+          else { preview.select(); say(status, text.selected); }
+        });
+      }
+
+      // ---- The long prompts ----------------------------------------------
+      var strings = ask ? JSON.parse(ask.dataset.text) : { copied: "✓", selected: "Ctrl+C" };
+      document.querySelectorAll("[data-prompt]").forEach(function (card) {
+        var source = card.querySelector("[data-prompt-text]");
+        var body = source.textContent || "";
+        var status = card.querySelector("[data-status]");
+        var selectSource = function () {
+          var range = document.createRange();
+          range.selectNodeContents(source);
+          var selection = window.getSelection();
+          if (selection) { selection.removeAllRanges(); selection.addRange(range); }
+        };
+        card.querySelector("[data-copy]").addEventListener("click", function () {
+          if (copy(body)) { say(status, strings.copied); }
+          else { selectSource(); say(status, strings.selected); }
+        });
+      });
+    })();
+  </script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Theoretical Mechanics — What a Classical Mechanical System Is.   Worked solutions are done in the tutorials and are not published here. </p> </div> </footer> <script>
+      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
+        var root = document.documentElement;
+        var current = root.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("mechanics-theme", next); } catch (e) {}
+      });
+    </script>  <script type="module" src="/tem/_astro/Base.astro_astro_type_script_index_0_lang.CaQP8g50.js"></script> </body> </html>

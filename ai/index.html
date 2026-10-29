@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="lt" data-refpop="{&#34;open&#34;:&#34;Atverti konspekte →&#34;,&#34;goto&#34;:&#34;Eiti ten →&#34;,&#34;loading&#34;:&#34;Įkeliama…&#34;,&#34;failed&#34;:&#34;Šios nuorodos įkelti nepavyko.&#34;}"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mokytis su DI · Teorinė mechanika</title><meta name="description" content="Pasirinkite paskaitą ir skyrelį. Parenkite užklausą, tada patys tikrinkite atsakymo prielaidas ir skaičiavimus."><link rel="icon" href="/tem/favicon.svg"><link rel="alternate" hreflang="lt" href="/tem/ai"><link rel="alternate" hreflang="en" href="/tem/en/ai"><script>
+      // Applied before first paint, so the page never flashes the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("mechanics-theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script><link rel="stylesheet" href="/tem/_astro/about.D-EpBVDy.css"></head> <body> <script type="module" src="/tem/_astro/UserNav.astro_astro_type_script_index_0_lang.DBZI4Erb.js"></script>  <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
+      // Fade the board out over the first 60% of a screen of scrolling.
+      (function () {
+        var board = document.querySelector(".board"), frame = 0;
+        if (!board) return;
+        function update() {
+          frame = 0;
+          board.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.6)));
+        }
+        window.addEventListener("scroll", function () {
+          if (!frame) frame = requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+      })();
+    </script> <a class="skip-link" href="#main">Pereiti prie turinio</a> <header class="site-header"> <div class="wrap bar">  <a class="brand" href="/tem/">Teorinė mechanika</a> <nav class="site-nav">  <div class="nav-links"> <a href="/tem/"> Paskaitos </a><a href="/tem/problems"> Uždaviniai </a><a href="/tem/ai" aria-current="page"> Mokytis su DI </a><a href="/tem/literature"> Literatūra </a><a href="/tem/about"> Apie kursą </a><a href="/tem/search"> Paieška </a> </div>  <a class="matfiz-user-nav" href="/tem/user" data-matfiz-nav data-label="Mano pažanga" aria-label="Mano pažanga" title="Mano pažanga" data-matfiz-course="{&#34;version&#34;:1,&#34;id&#34;:&#34;mechanics&#34;,&#34;prefix&#34;:&#34;mechanics-&#34;,&#34;titles&#34;:{&#34;lt&#34;:&#34;Teorinė mechanika&#34;,&#34;en&#34;:&#34;Theoretical Mechanics&#34;},&#34;homes&#34;:{&#34;lt&#34;:&#34;/tem/&#34;,&#34;en&#34;:&#34;/tem/en/&#34;},&#34;details&#34;:{&#34;lt&#34;:&#34;/tem/&#34;,&#34;en&#34;:&#34;/tem/en/&#34;}}" hidden data-astro-cid-udyq3rbu> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-astro-cid-udyq3rbu> <path d="M3 3v18h18" data-astro-cid-udyq3rbu></path><path d="m7 15 4-4 3 3 5-6" data-astro-cid-udyq3rbu></path> </svg> </a>   <div class="lang-switch" role="group" aria-label="Kalba"> <a href="/tem/ai" hreflang="lt" lang="lt" aria-current="true"> LT <span class="lang-full">Lietuvių</span> </a><a href="/tem/en/ai" hreflang="en" lang="en"> EN <span class="lang-full">English</span> </a> </div> <button class="theme-toggle" type="button" data-theme-toggle aria-label="Perjungti šviesią ir tamsią temą"> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" id="main" data-pagefind-body="true">  <header class="page-head"> <h1>Mokytis su DI</h1> <p class="lede">Pasirinkite paskaitą ir skyrelį. Parenkite užklausą, tada patys tikrinkite atsakymo prielaidas ir skaičiavimus.</p> </header> <section class="ask" id="ask" aria-labelledby="ask-heading" data-ask="{&#34;lectures&#34;:[{&#34;id&#34;:1,&#34;title&#34;:&#34;Būsenos, determinuotumas ir faziniai portretai&#34;,&#34;sections&#34;:[&#34;Determinuotumas&#34;,&#34;Vektoriniai laukai ir srautai&#34;,&#34;Pilnumas&#34;,&#34;Vienas laisvės laipsnis: energijos metodas&#34;,&#34;Švytuoklė ir cilindras&#34;,&#34;Kodėl fazinė erdvė? Palyginimas su trintimi&#34;]},{&#34;id&#34;:2,&#34;title&#34;:&#34;Sąryšiai ir Lagranžo lygtys&#34;,&#34;sections&#34;:[&#34;Holonominiai sąryšiai&#34;,&#34;Konfigūracijų erdvės&#34;,&#34;Greičiai&#34;,&#34;Idealieji sąryšiai ir Dalambero principas&#34;,&#34;Lagranžo lygtys ir švytuoklė&#34;]},{&#34;id&#34;:3,&#34;title&#34;:&#34;Hamiltono principas ir Neter teorema&#34;,&#34;sections&#34;:[&#34;Veikimas ir jo pirmoji variacija&#34;,&#34;Stacionarusis veikimas nebūtinai mažiausias&#34;,&#34;Koordinačių keitimas ir kalibravimo laisvė&#34;,&#34;Kraštinis dėmuo ir impulsas&#34;,&#34;Neter teorema Lagranžo aprašyme&#34;,&#34;Energijos funkcija ir centrinė jėga&#34;]},{&#34;id&#34;:4,&#34;title&#34;:&#34;Ležandro transformacija ir Hamiltono lygtys&#34;,&#34;sections&#34;:[&#34;Impulsas yra kovektorius&#34;,&#34;Iškilosios funkcijos Ležandro transformacija&#34;,&#34;Lagranžiano Ležandro transformacija&#34;,&#34;Veikimo principas fazinėje erdvėje&#34;,&#34;Natūraliosios sistemos; Lagranžo ir Hamiltono aprašymai&#34;]},{&#34;id&#34;:5,&#34;title&#34;:&#34;Stebiniai ir Puasono algebra&#34;,&#34;sections&#34;:[&#34;Stebiniai&#34;,&#34;Puasono skliaustas&#34;,&#34;Algebra&#34;,&#34;Tvarieji dydžiai&#34;,&#34;Judesio kiekio momentas&#34;,&#34;Heizenbergo vaizdas&#34;,&#34;Baigtinių matmenų poalgebriai&#34;]},{&#34;id&#34;:6,&#34;title&#34;:&#34;Srautai, simetrijos ir simplektinė forma&#34;,&#34;sections&#34;:[&#34;Hamiltono vektoriniai laukai: X_{f}=J∇f&#34;,&#34;Skliausto išsaugojimas ir Jakobio tapatybė&#34;,&#34;Li skliaustas ir X_{{f,g}}&#34;,&#34;Neter abipusiškumas&#34;,&#34;Simplektinė forma&#34;,&#34;Simplektinė grupė; srautai simplektiniai&#34;,&#34;Kvadratiniai hamiltonianai&#34;]},{&#34;id&#34;:7,&#34;title&#34;:&#34;Būsenos, Liuvilio teorema ir antrasis atsakymas&#34;,&#34;sections&#34;:[&#34;Būsenos&#34;,&#34;Liuvilio teorema&#34;,&#34;Du aprašymai&#34;,&#34;Atraktorių nėra&#34;,&#34;Kas yra mechaninė sistema: antrasis atsakymas&#34;]},{&#34;id&#34;:8,&#34;title&#34;:&#34;Kanoniniai atvaizdavimai ir generuojančiosios funkcijos&#34;,&#34;sections&#34;:[&#34;Kanoniniai atvaizdavimai&#34;,&#34;1-formos koordinatėmis&#34;,&#34;Uždarumo kriterijus&#34;,&#34;Generuojančiosios funkcijos&#34;,&#34;Nuo laiko priklausantys kanoniniai atvaizdavimai&#34;]},{&#34;id&#34;:9,&#34;title&#34;:&#34;Hamiltono–Jakobio teorija ir veiksmo bei kampo kintamieji&#34;,&#34;sections&#34;:[&#34;Hamiltono–Jakobio lygtis&#34;,&#34;Pilnieji integralai ir Jakobio teorema&#34;,&#34;Nuo laiko nepriklausantys hamiltonianai ir kintamųjų atskyrimas&#34;,&#34;Veiksmas ir kampas vienam laisvės laipsniui&#34;]},{&#34;id&#34;:10,&#34;title&#34;:&#34;Impulso atvaizdavimai ir redukcija&#34;,&#34;sections&#34;:[&#34;Matricų grupės ir jų generatoriai&#34;,&#34;Impulso atvaizdavimas ir koliečiamieji pakėlimai&#34;,&#34;Neter teorema grupėms&#34;,&#34;Cikliniai kintamieji&#34;,&#34;Redukuota centrinė jėga&#34;,&#34;Keplerio uždavinys: orbitos ir paslėpta simetrija&#34;]},{&#34;id&#34;:11,&#34;title&#34;:&#34;Puasono daugdaros ir standusis kūnas&#34;,&#34;sections&#34;:[&#34;Puasono struktūros erdvėje ℝ^{m}&#34;,&#34;Li–Puasono skliaustas ir jo kilmė&#34;,&#34;Kazimiro funkcijos ir lapai&#34;,&#34;Standusis kūnas ir jo ženklas&#34;,&#34;Oilerio lygtys&#34;,&#34;Stabiliosios ašys&#34;,&#34;Nestabilioji ašis&#34;]},{&#34;id&#34;:12,&#34;title&#34;:&#34;Integruojamumas ir mechaninės sistemos samprata&#34;,&#34;sections&#34;:[&#34;Lagranžo poerdviai&#34;,&#34;Integralai involiucijoje&#34;,&#34;Lygio aibės yra Lagranžo paviršiai&#34;,&#34;Liuvilio–Arnoldo teorema&#34;,&#34;Kas yra mechaninė sistema: galutinė lentelė&#34;,&#34;Ką išsaugo kvantinė mechanika&#34;]}],&#34;context&#34;:&#34;Studijuoju teorinę mechaniką: Lagranžo, Hamiltono ir Puasono aprašymus. Nagrinėju {n}-ąją paskaitą „{title}“, skyrelį „{topic}“. Remkis paskaitos ištrauka; jei jos reikia, paprašyk. Kanoninis skliaustas yra {f,g}=f_q g_p−f_p g_q, laikinė evoliucija yra {f,H}, o X_f=J∇f ir X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Dažnis žymimas ν, simplektinė forma – ω. Nurodyk prielaidas, reguliarumą ir sritis. Skirk lokalius ir globalius teiginius, įrodytus rezultatus, įrodymų eskizus ir cituojamus rezultatus. Nenaudok diferencialinių 2-formų skaičiavimo. Terminai: holonominiai sąryšiai, sąryšio jėga. Atsakyk lietuviškai.&#34;,&#34;modes&#34;:[{&#34;id&#34;:&#34;explain&#34;,&#34;label&#34;:&#34;Paaiškink pavyzdžiu&#34;,&#34;description&#34;:&#34;Trumpai paaiškink idėją, apibrėžk simbolius ir išspręsk vieną nedidelį šio skyrelio pavyzdį. Nurodyk prielaidas ir sritį. Duok panašų uždavinį ir lauk mano sprendimo. Paprašyk patikrinti ženklus, matavimo vienetus ir ribinius atvejus.&#34;,&#34;detailLabel&#34;:&#34;Įrašykite klausimą arba savo sprendimą (nebūtina).&#34;,&#34;detailPlaceholder&#34;:&#34;Klausimas: …\nMano sprendimas: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nTrumpai paaiškink idėją, apibrėžk simbolius ir išspręsk vieną nedidelį šio skyrelio pavyzdį. Nurodyk prielaidas ir sritį. Duok panašų uždavinį ir lauk mano sprendimo. Paprašyk patikrinti ženklus, matavimo vienetus ir ribinius atvejus.&#34;},{&#34;id&#34;:&#34;quiz&#34;,&#34;label&#34;:&#34;Paklausinėk mane&#34;,&#34;description&#34;:&#34;Užduok po vieną klausimą ir lauk atsakymo. Pradėk tiksliu apibrėžimu, tada paprašyk pavyzdžio, kontrpavyzdžio ir teoremai būtinos prielaidos. Jei stringu, duok patikrinimą arba užuominą.&#34;,&#34;detailLabel&#34;:&#34;Įrašykite klausimą arba savo sprendimą (nebūtina).&#34;,&#34;detailPlaceholder&#34;:&#34;Klausimas: …\nMano sprendimas: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nUžduok po vieną klausimą ir lauk atsakymo. Pradėk tiksliu apibrėžimu, tada paprašyk pavyzdžio, kontrpavyzdžio ir teoremai būtinos prielaidos. Jei stringu, duok patikrinimą arba užuominą.&#34;},{&#34;id&#34;:&#34;check&#34;,&#34;label&#34;:&#34;Patikrink mano sprendimą&#34;,&#34;description&#34;:&#34;Paklausk, kas duota ir ką reikia parodyti. Skaityk mano sprendimą po žingsnį ir prašyk kiekvieną pagrįsti. Padėk pačiam rasti klaidą. Tikrink prielaidas, sąryšio jėgas, ženklus, matavimo vienetus ir tvariuosius dydžius. Neišgalvok ištraukų ar nuorodų.&#34;,&#34;detailLabel&#34;:&#34;Įrašykite klausimą arba savo sprendimą (nebūtina).&#34;,&#34;detailPlaceholder&#34;:&#34;Klausimas: …\nMano sprendimas: …&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;{detail}&#34;,&#34;template&#34;:&#34;{context}\n\n{detail}\n\nPaklausk, kas duota ir ką reikia parodyti. Skaityk mano sprendimą po žingsnį ir prašyk kiekvieną pagrįsti. Padėk pačiam rasti klaidą. Tikrink prielaidas, sąryšio jėgas, ženklus, matavimo vienetus ir tvariuosius dydžius. Neišgalvok ištraukų ar nuorodų.&#34;}]}" data-text="{&#34;copied&#34;:&#34;Nukopijuota ✓&#34;,&#34;selected&#34;:&#34;Užklausa pažymėta. Paspauskite Ctrl+C.&#34;}"> <h2 id="ask-heading">Klausti apie paskaitą</h2> <div class="ask-card"> <label class="ask-step"> <span>Paskaita</span> <select class="select-field" data-lecture> <option value="1"> 1 · Būsenos, determinuotumas ir faziniai portretai </option><option value="2"> 2 · Sąryšiai ir Lagranžo lygtys </option><option value="3"> 3 · Hamiltono principas ir Neter teorema </option><option value="4"> 4 · Ležandro transformacija ir Hamiltono lygtys </option><option value="5"> 5 · Stebiniai ir Puasono algebra </option><option value="6"> 6 · Srautai, simetrijos ir simplektinė forma </option><option value="7"> 7 · Būsenos, Liuvilio teorema ir antrasis atsakymas </option><option value="8"> 8 · Kanoniniai atvaizdavimai ir generuojančiosios funkcijos </option><option value="9"> 9 · Hamiltono–Jakobio teorija ir veiksmo bei kampo kintamieji </option><option value="10"> 10 · Impulso atvaizdavimai ir redukcija </option><option value="11"> 11 · Puasono daugdaros ir standusis kūnas </option><option value="12" selected> 12 · Integruojamumas ir mechaninės sistemos samprata </option> </select> </label> <fieldset class="ask-step"> <legend>Skyrelis</legend> <div class="chip-row" data-topics> <label class="topic-chip"><input type="radio" name="ask-topic" value="Lagranžo poerdviai" checked><span>Lagranžo poerdviai</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Integralai involiucijoje"><span>Integralai involiucijoje</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Lygio aibės yra Lagranžo paviršiai"><span>Lygio aibės yra Lagranžo paviršiai</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Liuvilio–Arnoldo teorema"><span>Liuvilio–Arnoldo teorema</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Kas yra mechaninė sistema: galutinė lentelė"><span>Kas yra mechaninė sistema: galutinė lentelė</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Ką išsaugo kvantinė mechanika"><span>Ką išsaugo kvantinė mechanika</span></label> </div> </fieldset> <fieldset class="ask-step"> <legend>Ko reikia?</legend> <div class="mode-grid"> <label class="mode"> <input type="radio" name="ask-mode" value="explain" checked> <span class="mode-label">Paaiškink pavyzdžiu</span> <span class="mode-description">Trumpai paaiškink idėją, apibrėžk simbolius ir išspręsk vieną nedidelį šio skyrelio pavyzdį. Nurodyk prielaidas ir sritį. Duok panašų uždavinį ir lauk mano sprendimo. Paprašyk patikrinti ženklus, matavimo vienetus ir ribinius atvejus.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="quiz"> <span class="mode-label">Paklausinėk mane</span> <span class="mode-description">Užduok po vieną klausimą ir lauk atsakymo. Pradėk tiksliu apibrėžimu, tada paprašyk pavyzdžio, kontrpavyzdžio ir teoremai būtinos prielaidos. Jei stringu, duok patikrinimą arba užuominą.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="check"> <span class="mode-label">Patikrink mano sprendimą</span> <span class="mode-description">Paklausk, kas duota ir ką reikia parodyti. Skaityk mano sprendimą po žingsnį ir prašyk kiekvieną pagrįsti. Padėk pačiam rasti klaidą. Tikrink prielaidas, sąryšio jėgas, ženklus, matavimo vienetus ir tvariuosius dydžius. Neišgalvok ištraukų ar nuorodų.</span> </label> </div> </fieldset> <label class="ask-step"> <span data-detail-label>Įrašykite klausimą arba savo sprendimą (nebūtina).</span> <textarea class="number-field ask-detail" rows="2" data-detail placeholder="Klausimas: …
+Mano sprendimas: …"></textarea> </label> <label class="ask-step"> <span>Jūsų užklausa – galite redaguoti</span> <textarea class="ask-preview" rows="12" data-preview spellcheck="false"></textarea> </label> <div class="ask-actions"> <a class="btn btn-primary" href="https://www.google.com/search?udm=50" target="_blank" rel="noopener" data-ai-mode>Klausti Google DI ↗</a> <button class="btn" type="button" data-copy-preview>Kopijuoti užklausą</button> </div> <p class="ask-status" data-status role="status" aria-live="polite">Nukopijuotą užklausą galite naudoti pasirinktame asistente.</p> </div> </section><h2>Nuo ko pradėti</h2> <p class="section-intro">Paprašykite patikrinti prielaidą prieš pradedant skaičiuoti.</p> <div class="chat"> <div class="chat-turn chat-you"> <div class="chat-bubble"> <span class="chat-who">Jūs</span> <p>Noriu šiam potencialui taikyti pilnumo kriterijų.</p> </div>  </div><div class="chat-turn chat-ai"> <div class="chat-bubble"> <span class="chat-who">DI</span> <p>Ar potencialas yra C² visoje ℝⁿ ir aprėžtas iš apačios?</p> </div>  </div> </div> <h2>Mokymosi įpročiai</h2> <ul class="habits"> <li><b>Pateikite šaltinį.</b> Įklijuokite tikslų teiginį ir savo sprendimą.</li><li><b>Spręskite patys.</b> Paprašykite vienos užuominos ir bandykite toliau.</li> </ul> <h2>Ilgesni pokalbiai</h2> <p class="section-intro">Įklijuokite ištrauką ir užpildykite laukus laužtiniuose skliaustuose.</p> <details class="prompt-card" data-prompt> <summary> <span class="prompt-title">1 · Pakartoti sąvoką</span> <span class="prompt-when">Įklijuokite paskaitos ištrauką ir savo klausimą.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Studijuoju teorinę mechaniką: Lagranžo, Hamiltono ir Puasono aprašymus. Nagrinėju [N]-ąją paskaitą „[paskaitos pavadinimas]“, skyrelį „[skyrelis]“. Remkis paskaitos ištrauka; jei jos reikia, paprašyk. Kanoninis skliaustas yra {f,g}=f_q g_p−f_p g_q, laikinė evoliucija yra {f,H}, o X_f=J∇f ir X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Dažnis žymimas ν, simplektinė forma – ω. Nurodyk prielaidas, reguliarumą ir sritis. Skirk lokalius ir globalius teiginius, įrodytus rezultatus, įrodymų eskizus ir cituojamus rezultatus. Nenaudok diferencialinių 2-formų skaičiavimo. Terminai: holonominiai sąryšiai, sąryšio jėga. Atsakyk lietuviškai.
+
+Paprašyk manęs pateikti apibrėžimą, pavyzdį ir kontrpavyzdį. Klausinėk po vieną klausimą ir lauk.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">2 · Patikrinti įrodymą</span> <span class="prompt-when">Įklijuokite paskaitos ištrauką ir savo klausimą.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Studijuoju teorinę mechaniką: Lagranžo, Hamiltono ir Puasono aprašymus. Nagrinėju [N]-ąją paskaitą „[paskaitos pavadinimas]“, skyrelį „[skyrelis]“. Remkis paskaitos ištrauka; jei jos reikia, paprašyk. Kanoninis skliaustas yra {f,g}=f_q g_p−f_p g_q, laikinė evoliucija yra {f,H}, o X_f=J∇f ir X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Dažnis žymimas ν, simplektinė forma – ω. Nurodyk prielaidas, reguliarumą ir sritis. Skirk lokalius ir globalius teiginius, įrodytus rezultatus, įrodymų eskizus ir cituojamus rezultatus. Nenaudok diferencialinių 2-formų skaičiavimo. Terminai: holonominiai sąryšiai, sąryšio jėga. Atsakyk lietuviškai.
+
+Paprašyk teiginio ir viso mano įrodymo. Tikrink kiekvieno žingsnio prielaidas, sritis ir ženklus. Pirmiausia duok užuominą, kad klaidą rasčiau pats.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">3 · Sudaryti uždavinį</span> <span class="prompt-when">Įklijuokite paskaitos ištrauką ir savo klausimą.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Studijuoju teorinę mechaniką: Lagranžo, Hamiltono ir Puasono aprašymus. Nagrinėju [N]-ąją paskaitą „[paskaitos pavadinimas]“, skyrelį „[skyrelis]“. Remkis paskaitos ištrauka; jei jos reikia, paprašyk. Kanoninis skliaustas yra {f,g}=f_q g_p−f_p g_q, laikinė evoliucija yra {f,H}, o X_f=J∇f ir X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Dažnis žymimas ν, simplektinė forma – ω. Nurodyk prielaidas, reguliarumą ir sritis. Skirk lokalius ir globalius teiginius, įrodytus rezultatus, įrodymų eskizus ir cituojamus rezultatus. Nenaudok diferencialinių 2-formų skaičiavimo. Terminai: holonominiai sąryšiai, sąryšio jėga. Atsakyk lietuviškai.
+
+Padėk man sudaryti vieną šios paskaitos uždavinį. Patikrink, ar duomenų pakanka. Paprašyk manęs pačiam išspręsti uždavinį ir patikrinti atsakymą prieš perduodant jį kitam studentui.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">4 · Spręsti uždavinį</span> <span class="prompt-when">Įklijuokite paskaitos ištrauką ir savo klausimą.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Studijuoju teorinę mechaniką: Lagranžo, Hamiltono ir Puasono aprašymus. Nagrinėju [N]-ąją paskaitą „[paskaitos pavadinimas]“, skyrelį „[skyrelis]“. Remkis paskaitos ištrauka; jei jos reikia, paprašyk. Kanoninis skliaustas yra {f,g}=f_q g_p−f_p g_q, laikinė evoliucija yra {f,H}, o X_f=J∇f ir X_f h={h,f}; X_{ {f,g} }=−[X_f,X_g]. Dažnis žymimas ν, simplektinė forma – ω. Nurodyk prielaidas, reguliarumą ir sritis. Skirk lokalius ir globalius teiginius, įrodytus rezultatus, įrodymų eskizus ir cituojamus rezultatus. Nenaudok diferencialinių 2-formų skaičiavimo. Terminai: holonominiai sąryšiai, sąryšio jėga. Atsakyk lietuviškai.
+
+Paprašyk uždavinio sąlygos ir mano bandymo. Klausk, kodėl pasirinktas metodas tinka. Duok po vieną užuominą ir lauk mano sprendimo.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Kopijuoti užklausą</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><h2>Darbas poromis</h2> <ol class="steps"> <li>Kiekvienas sudarykite uždavinį ir patikrinkite savo sprendimą.</li><li>Apsikeiskite tik sąlygomis.</li><li>Išspręskite vienas kito uždavinį.</li><li>Be DI palyginkite sprendimus ir aptarkite klaidas.</li> </ol> <div class="trap"> <h3>Ką patikrinti</h3> <p><strong>Tikrinkite prielaidas.</strong> Patikrinkite prielaidas, ženklus ir tvariuosius dydžius pagal konspektą.</p><p><strong>Patikrinkite atsakymą.</strong> Patikrinkite matavimo vienetus, ženklus ir ribinius atvejus.</p> </div> <script>
+    (function () {
+      /** Copy synchronously inside the click; the async API is the fallback. */
+      function copy(text) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed"; area.style.opacity = "0"; area.style.top = "0";
+        document.body.appendChild(area);
+        area.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(area);
+        if (!ok && navigator.clipboard) {
+          navigator.clipboard.writeText(text).catch(function () {});
+          ok = true;
+        }
+        return ok;
+      }
+      function say(status, message) {
+        if (!status) return;
+        status.textContent = message;
+        status.classList.add("is-live");
+      }
+
+      // ---- Ask about a lecture -------------------------------------------
+      var ask = document.querySelector("[data-ask]");
+      if (ask) {
+        var data = JSON.parse(ask.dataset.ask);
+        var text = JSON.parse(ask.dataset.text);
+        var lectureSelect = ask.querySelector("[data-lecture]");
+        var topics = ask.querySelector("[data-topics]");
+        var detail = ask.querySelector("[data-detail]");
+        var detailLabel = ask.querySelector("[data-detail-label]");
+        var preview = ask.querySelector("[data-preview]");
+        var status = ask.querySelector("[data-status]");
+
+        var fill = function (template, values) {
+          return template.replace(/\{(\w+)\}/g, function (whole, key) {
+            return key in values ? values[key] : whole;
+          });
+        };
+        var lecture = function () {
+          return data.lectures.find(function (l) { return String(l.id) === lectureSelect.value; });
+        };
+        var mode = function () {
+          var picked = ask.querySelector("input[name=ask-mode]:checked");
+          return data.modes.find(function (m) { return m.id === (picked && picked.value); }) || data.modes[0];
+        };
+        var topic = function () {
+          var picked = ask.querySelector("input[name=ask-topic]:checked");
+          return picked ? picked.value : "";
+        };
+
+        var renderTopics = function () {
+          topics.textContent = "";
+          lecture().sections.forEach(function (title, index) {
+            var label = document.createElement("label");
+            label.className = "topic-chip";
+            var input = document.createElement("input");
+            input.type = "radio"; input.name = "ask-topic"; input.value = title; input.checked = index === 0;
+            var span = document.createElement("span");
+            span.textContent = title;
+            label.appendChild(input); label.appendChild(span);
+            topics.appendChild(label);
+          });
+        };
+        var render = function () {
+          var l = lecture(), m = mode(), typed = detail.value.trim();
+          detailLabel.textContent = m.detailLabel;
+          detail.placeholder = m.detailPlaceholder;
+          var context = fill(data.context, { n: l.id, title: l.title, topic: topic() });
+          var detailText = typed ? fill(m.detailFilled, { detail: typed }) : m.detailEmpty;
+          preview.value = fill(m.template, { context: context, detail: detailText })
+            .replace(/\n{3,}/g, "\n\n");
+          syncAiMode();
+        };
+        var aiMode = ask.querySelector("[data-ai-mode]");
+        var syncAiMode = function () {
+          aiMode.href = "https://www.google.com/search?udm=50&q=" + encodeURIComponent(preview.value);
+        };
+        // The preview is editable, and an edited prompt is the one to send.
+        preview.addEventListener("input", syncAiMode);
+
+        // A lecture page links here as ai/?lecture=N, so arrive on that lecture.
+        var wanted = new URLSearchParams(location.search).get("lecture");
+        if (wanted && data.lectures.some(function (l) { return String(l.id) === wanted; })) {
+          lectureSelect.value = wanted;
+          renderTopics();
+        }
+        lectureSelect.addEventListener("change", function () { renderTopics(); render(); });
+        // The preview is excluded: its change event fires on blur, and
+        // re-rendering then would throw away what the student just edited.
+        ask.addEventListener("change", function (event) {
+          if (event.target !== lectureSelect && event.target !== preview && event.target !== detail) render();
+        });
+        detail.addEventListener("input", render);
+        render();
+
+        ask.querySelector("[data-copy-preview]").addEventListener("click", function () {
+          if (copy(preview.value)) { say(status, text.copied); }
+          else { preview.select(); say(status, text.selected); }
+        });
+      }
+
+      // ---- The long prompts ----------------------------------------------
+      var strings = ask ? JSON.parse(ask.dataset.text) : { copied: "✓", selected: "Ctrl+C" };
+      document.querySelectorAll("[data-prompt]").forEach(function (card) {
+        var source = card.querySelector("[data-prompt-text]");
+        var body = source.textContent || "";
+        var status = card.querySelector("[data-status]");
+        var selectSource = function () {
+          var range = document.createRange();
+          range.selectNodeContents(source);
+          var selection = window.getSelection();
+          if (selection) { selection.removeAllRanges(); selection.addRange(range); }
+        };
+        card.querySelector("[data-copy]").addEventListener("click", function () {
+          if (copy(body)) { say(status, strings.copied); }
+          else { selectSource(); say(status, strings.selected); }
+        });
+      });
+    })();
+  </script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Teorinė mechanika — Kas yra klasikinė mechaninė sistema?   Uždaviniai sprendžiami per pratybas. Sprendimai čia neskelbiami. </p> </div> </footer> <script>
+      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
+        var root = document.documentElement;
+        var current = root.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("mechanics-theme", next); } catch (e) {}
+      });
+    </script>  <script type="module" src="/tem/_astro/Base.astro_astro_type_script_index_0_lang.CaQP8g50.js"></script> </body> </html>
